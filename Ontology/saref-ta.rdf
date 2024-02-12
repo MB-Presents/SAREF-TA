@@ -1,0 +1,2589 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://liidr.org/saref-ta/"
+     xml:base="https://liidr.org/saref-ta/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://liidr.org/saref-ta/">
+        <owl:versionIRI rdf:resource="https://liidr.org/saref-ta/1.0.0"/>
+        <dcterms:creator>Elizabeth Chang</dcterms:creator>
+        <dcterms:creator>Frank den Hartog</dcterms:creator>
+        <dcterms:creator xml:lang="en">Marius Becherer</dcterms:creator>
+        <dcterms:creator>Omar K. Hussain</dcterms:creator>
+        <dcterms:creator>Yu Zhang</dcterms:creator>
+        <dcterms:issued>2023-04-03</dcterms:issued>
+        <dcterms:issued>2024-01-20</dcterms:issued>
+        <dcterms:license>http://creativecommons.org/licenses/by/4.0/</dcterms:license>
+        <dcterms:publisher>https://liidr.org</dcterms:publisher>
+        <dcterms:title>Smart Applications Reference Ontology for Trust Agents</dcterms:title>
+        <vann:preferredNamespacePrefix>saref-ta</vann:preferredNamespacePrefix>
+        <rdfs:comment xml:lang="en">The Smart Application Reference Ontology for Trust Agents (SAREF-TA) intends to describe functions and properties of devices used for trust-related recommendations to enable trustworthy collaboration between devices managed by different organisations.</rdfs:comment>
+        <rdfs:label xml:lang="en">SAREF-TA: The Smart Applications Reference Ontology for Trust Agents</rdfs:label>
+        <rdfs:seeAlso>saref-ta</rdfs:seeAlso>
+        <owl:versionInfo xml:lang="en">The Smart Application Reference Ontology for Trust Agents (SAREF-TA) intends to describe functions and properties of devices used for trust-related recommendations to enable trustworthy collaboration between devices managed by different organisations.</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">v1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://liidr.org/saref-ta/accomplishes -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/accomplishes">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/isAccomplishedBy"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A relationship between a certain entity (e.g., a device) and the task it accomplishes</rdfs:comment>
+        <rdfs:label xml:lang="en">accomplishes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/actsUpon -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/actsUpon">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/State"/>
+        <rdfs:comment xml:lang="en">A relationship between a command and a state</rdfs:comment>
+        <rdfs:label xml:lang="en">acts upon</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/composesNetworkPacket -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/composesNetworkPacket">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/isComposedByCommand"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/NetworkProtocolCommand"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/NetworkPacket"/>
+        <rdfs:comment xml:lang="en">A network command composes a network packet.</rdfs:comment>
+        <rdfs:label xml:lang="en">compose network packet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/consistsOf -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/consistsOf">
+        <rdfs:comment xml:lang="en">A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)</rdfs:comment>
+        <rdfs:label xml:lang="en">consists of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/controlsProperty -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/controlsProperty">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">A relationship specifying the property that can be controlled by a certain device</rdfs:comment>
+        <rdfs:label xml:lang="en">controls property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasCommand -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasCommand">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Function"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:comment xml:lang="en">A relationship between a function and a command</rdfs:comment>
+        <rdfs:label xml:lang="en">has command</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasFunction -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasFunction">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Function"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the function of a device</rdfs:comment>
+        <rdfs:label xml:lang="en">has function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasMeasurement -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasMeasurement">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/isMeasurementOf"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship between a feature of interest and a measurement about it</rdfs:comment>
+        <rdfs:label xml:lang="en">has measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasMeterReading -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasMeterReading">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/MeteringFunction"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship between a metering function and the measurement of the reading</rdfs:comment>
+        <rdfs:label xml:lang="en">has meter reading</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasMeterReadingType -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasMeterReadingType">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/MeteringFunction"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the reading type of a metering function (e.g., Water, Gas, Pressure , Energy , Power, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">has meter reading type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasNetworkPacketProperty -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasNetworkPacketProperty">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/isPropertyOfNetworkPacket"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/NetworkPacket"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/NetworkPacketProperty"/>
+        <rdfs:comment xml:lang="en">A network packet has a network packet property</rdfs:comment>
+        <rdfs:label xml:lang="en">has network packet property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasPreferredSettingsBy -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasPreferredSettingsBy">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/prefersSettings"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Profile"/>
+        <rdfs:comment>The trust indictor is subject to the preferred settings of the profile.</rdfs:comment>
+        <rdfs:label>has preferred settings by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasPrice -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasPrice">
+        <rdfs:comment xml:lang="en">A relationship indentifying the price associated to an entity</rdfs:comment>
+        <rdfs:label xml:lang="en">has price</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasProfile -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasProfile">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Profile"/>
+        <rdfs:comment xml:lang="en">A relationship associating a profile to a certain device</rdfs:comment>
+        <rdfs:label xml:lang="en">has profile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasProperty -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasProperty">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/isPropertyOf"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">A relationship between a feature of interest and a property of that feature</rdfs:comment>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasSensingRange -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasSensingRange">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/SensingFunction"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship between a sensing function and a measurement identifying the range of a sensor detection</rdfs:comment>
+        <rdfs:label xml:lang="en">has sensing range</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasSensorType -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasSensorType">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/SensingFunction"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.) </rdfs:comment>
+        <rdfs:label xml:lang="en">has sensor type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasServiceProperty -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasServiceProperty">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/isServicePropertyOf"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Service"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/ServiceProperty"/>
+        <rdfs:comment xml:lang="en">A service has a service property.</rdfs:comment>
+        <rdfs:label xml:lang="en">has service property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasState -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasState">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/State"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the type of state of a device</rdfs:comment>
+        <rdfs:label xml:lang="en">has state</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasThresholdMeasurement -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasThresholdMeasurement">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/EventFunction"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship associated with an event function to notify that a certain threshold measurement has been exceeded</rdfs:comment>
+        <rdfs:label xml:lang="en">has threshold measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasTime -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasTime">
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Time"/>
+        <rdfs:comment xml:lang="en">A relationship to associate time information to an entity</rdfs:comment>
+        <rdfs:label xml:lang="en">has time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasTrustIndicator -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasTrustIndicator">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/isTrustIndicatorOf"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:comment>A task has a trust indicator</rdfs:comment>
+        <rdfs:label>has trust indicator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasTypicalConsumption -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/hasTypicalConsumption">
+        <rdfs:comment xml:lang="en">A relationship identifying the typical (energy or power) consumption of a device</rdfs:comment>
+        <rdfs:label xml:lang="en">has typical consumption</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isAbout -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isAbout">
+        <rdfs:comment xml:lang="en">A relationship identifying what an entity, such as a profile, is about</rdfs:comment>
+        <rdfs:label xml:lang="en">isAbout</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isAccomplishedBy -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isAccomplishedBy">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A relationship identifying an entity (e.g., a device) that can accomplish a task.</rdfs:comment>
+        <rdfs:label xml:lang="en">is accomplished by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isCommandOf -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isCommandOf">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Function"/>
+        <rdfs:comment xml:lang="en">A relationship between a command and a function.</rdfs:comment>
+        <rdfs:label xml:lang="en">is command of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isComposedByCommand -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isComposedByCommand">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/NetworkPacket"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/NetworkProtocolCommand"/>
+        <rdfs:comment xml:lang="en">A network packet is composed by a network command</rdfs:comment>
+        <rdfs:label xml:lang="en">is composed by command</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isControlledByDevice -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isControlledByDevice">
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">A relationship specifying the devices that can control a certain property</rdfs:comment>
+        <rdfs:label xml:lang="en">is controlled by device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isMeasuredByDevice -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isMeasuredByDevice">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">A relationship specifying the devices that can measure a certain property</rdfs:comment>
+        <rdfs:label xml:lang="en">is measured by device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isMeasuredIn -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isMeasuredIn">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the unit of measure used for a certain entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is measured in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isMeasurementOf -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isMeasurementOf">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">A relationship between a measurement and the feature of interest whose quality was measured</rdfs:comment>
+        <rdfs:label xml:lang="en">isMeasurementOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isObservedBy -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isObservedBy">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/observesFeatureOfInterest"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:comment>The feature of interest is observed by an trust indicator.</rdfs:comment>
+        <rdfs:label>is observed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isOfferedBy -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isOfferedBy">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/offers"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Service"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">A relationship between a service and a device that offers the service</rdfs:comment>
+        <rdfs:label xml:lang="en">is offered by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isPropertyOf -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isPropertyOf">
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">A relationship between a property and the feature of interest it belongs to</rdfs:comment>
+        <rdfs:label xml:lang="en">is property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isPropertyOfNetworkPacket -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isPropertyOfNetworkPacket">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/NetworkPacketProperty"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/NetworkPacket"/>
+        <rdfs:comment>The network property is a property of the network packet.</rdfs:comment>
+        <rdfs:label xml:lang="en">is property of network packet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isServicePropertyOf -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isServicePropertyOf">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/ServiceProperty"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Service"/>
+        <rdfs:comment xml:lang="en">A property is a service property of a service.</rdfs:comment>
+        <rdfs:label xml:lang="en">is service property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isTrustIndicatorOf -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isTrustIndicatorOf">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment>The trust indicator is related to the task.</rdfs:comment>
+        <rdfs:label>is trust indicator of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isTrustMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isTrustMeasuredBy">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/measuresTrust"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:comment xml:lang="en">The trust quality of a task is measured by trust indicators.</rdfs:comment>
+        <rdfs:label xml:lang="en">is measured by trust indicator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/isUsedFor -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/isUsedFor">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Commodity"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">A relationship specifying the commodity for which a device is used for</rdfs:comment>
+        <rdfs:label xml:lang="en">is used for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/makesMeasurement -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/makesMeasurement">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/measurementMadeBy"/>
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:comment xml:lang="en">A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates.</rdfs:comment>
+        <rdfs:label xml:lang="en">makes measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/measurementMadeBy -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/measurementMadeBy">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">A relation between a measurement and the device that made it.</rdfs:comment>
+        <rdfs:label xml:lang="en">measurement made by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/measuresProperty -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/measuresProperty">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">A relationship specifying the property that can be measured by a certain device</rdfs:comment>
+        <rdfs:label xml:lang="en">measures property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/measuresTrust -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/measuresTrust">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <dcterms:description xml:lang="en">A trust indicator measures trust of a task.</dcterms:description>
+        <rdfs:label xml:lang="en">measures trust</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/observesFeatureOfInterest -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/observesFeatureOfInterest">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/FeatureOfInterest"/>
+        <rdfs:comment>The trust indicator observes the feature of interest.</rdfs:comment>
+        <rdfs:label>observes feature of interest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/offers -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/offers">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Service"/>
+        <rdfs:comment xml:lang="en">A relationship between a device and a service</rdfs:comment>
+        <rdfs:label xml:lang="en">offers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/prefersSettings -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/prefersSettings">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Profile"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:comment>The profile prefers certains settings for the trust indicator.</rdfs:comment>
+        <rdfs:label>prefers settings</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/relatesToMeasurement -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/relatesToMeasurement">
+        <owl:inverseOf rdf:resource="https://liidr.org/saref-ta/relatesToProperty"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship between a property and the measurements it relates to</rdfs:comment>
+        <rdfs:label xml:lang="en">relates to measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/relatesToProperty -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/relatesToProperty">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship between a measurement and the property it relates to</rdfs:comment>
+        <rdfs:label xml:lang="en">relates to property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/represents -->
+
+    <owl:ObjectProperty rdf:about="https://liidr.org/saref-ta/represents">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Service"/>
+        <rdfs:range rdf:resource="https://liidr.org/saref-ta/Function"/>
+        <rdfs:comment xml:lang="en">A relationship between a service and a function.</rdfs:comment>
+        <rdfs:label xml:lang="en">represents</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://liidr.org/saref-ta/ApartmentNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/ApartmentNumber">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The data property Apartment Number specifies the Indoor Address concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Apartment Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Area -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/Area">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/IndoorLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The data property Area specifies the Indoor Label concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Area</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/BuildingNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/BuildingNumber">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/IndoorLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The data property Apartment Numberspecifies the Indoor Label concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Building Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/City -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/City">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The data property City specifies the Address concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Corridor -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/Corridor">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/IndoorLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The data property Corridor specifies the Indoor Label concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Corridor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Country -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/Country">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The data property Country specifies the Address concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/CountryState -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/CountryState">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The data property Country State specifies the Address concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Country State</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/DateTime -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/DateTime">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/FormalTimeRepresentation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The Date Time specifies the Formal Time Representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Date Time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Floor -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/Floor">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/IndoorLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The data property Floor specifies the Indoor Label concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Floor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/HostName -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/HostName">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/NetworkingFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The host name specifies the requested host of a networking function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Host Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/InvokeTime -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/InvokeTime">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/NetworkingFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment xml:lang="en">The Invoke Time specifies when the requested resource of a networking function has been called.</rdfs:comment>
+        <rdfs:label xml:lang="en">Invoke Time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Latitude -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/Latitude">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/GeographicCoordinates"/>
+        <rdfs:comment xml:lang="en">The latitude specify the location for various coordinate grid systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">Latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Longitude -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/Longitude">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/GeographicCoordinates"/>
+        <rdfs:comment xml:lang="en">The Longitude specify the location for various coordinate grid systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">Longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Owner -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/Owner">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/AffiliationProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Owner property specifies the affiliation of a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Owner</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/PostalCode -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/PostalCode">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The data property Postal Code specifies the Address concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Postal Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Room -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/Room">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/IndoorLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The data property Room specifies the Indoor Label concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Room</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Section -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/Section">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/IndoorLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The data property Section specifies the Indoor Label concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Section</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/State -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/State"/>
+    
+
+
+    <!-- https://liidr.org/saref-ta/StreetName -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/StreetName">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The data property Street Name specifies the Address concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Street Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/URL -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/URL">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/NetworkingFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Universial Resource Locator (URL) specifies the requested resource of a networking function.</rdfs:comment>
+        <rdfs:label xml:lang="en">URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/hasDescription">
+        <rdfs:comment xml:lang="en">A relationship providing a description of an entity (e.g., device). The value is expected to be a string or a string with language tag.</rdfs:comment>
+        <rdfs:comment xml:lang="en">DEPRECATED: The use of rdfs:comment is recommended instead.</rdfs:comment>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasManufacturer -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/hasManufacturer">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the manufacturer of an entity (e.g., device). The value is expected to be a string or a string with language tag.</rdfs:comment>
+        <rdfs:label xml:lang="en">has manufacturer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasModel -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/hasModel">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the model of an entity (e.g., device). The value is expected to be a string or a string with language tag.</rdfs:comment>
+        <rdfs:label xml:lang="en">has model</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasSerialNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/hasSerialNumber">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A serial number identifs an entity (e.g., device).</rdfs:comment>
+        <rdfs:label xml:lang="en">has Serial Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/hasTimestamp">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+        <rdfs:comment xml:lang="en">A relationship stating the timestamp of an entity (e.g. a measurement).</rdfs:comment>
+        <rdfs:label xml:lang="en">has timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasTrustIndicatorDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/hasTrustIndicatorDescription">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Trust Indicator Description describes the Trust Indicator.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Trust Indicator Description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasTrustIndicatorName -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/hasTrustIndicatorName">
+        <rdfs:domain rdf:resource="https://liidr.org/saref-ta/TrustIndicator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Trust Indicator Name describes the name Trust Indicator.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Trust Indicator Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasTrustLevel -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/hasTrustLevel">
+        <rdfs:comment xml:lang="en">The Trust Level provides a definition to indicate if a Trust Indicator is trustworthyor untrustworthy.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Trust Level</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://liidr.org/saref-ta/hasValue -->
+
+    <owl:DatatypeProperty rdf:about="https://liidr.org/saref-ta/hasValue">
+        <rdfs:comment xml:lang="en">A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://liidr.org/saref-ta/ActuatingFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/ActuatingFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Function"/>
+        <rdfs:comment xml:lang="en">A function that allows to transmit data to actuators, such as level settings (e.g., temperature) or binary switching (e.g., open/close, on/off)</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuating function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Actuator -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Actuator">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/ActuatingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A device responsible for moving or controlling a mechanism or system by performing an actuating function</rdfs:comment>
+        <rdfs:label xml:lang="en">Actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Address -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Address">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/DescriptivePositionRepresentation"/>
+        <rdfs:comment xml:lang="en">The Address is a type of the Descriptive Position Representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/AffiliationProperty -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/AffiliationProperty">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Property"/>
+        <rdfs:comment xml:lang="en">The affiliation property clarifies to where a device is affiliated with. Depending on the organisation and user, certain security mechanims or quality ensurance can make a device more or less trustworthy.</rdfs:comment>
+        <rdfs:label xml:lang="en">Affiliation Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Appliance -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Appliance">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">An electrical/mechanical machine that accomplish some household functions, such as cleaning or cooking</rdfs:comment>
+        <rdfs:label xml:lang="en">Appliance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/CloseCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/CloseCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/OpenCloseState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/OpenCloseFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://liidr.org/saref-ta/OpenCommand"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Close command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/CloseState -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/CloseState">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/OpenCloseState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is CLOSE</rdfs:comment>
+        <rdfs:label xml:lang="en">Close state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Coal -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Coal">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Commodity"/>
+        <rdfs:comment xml:lang="en">A type of commodity</rdfs:comment>
+        <rdfs:label xml:lang="en">Coal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Command -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Command">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/actsUpon"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://liidr.org/saref-ta/Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A directive that a device must support to perform a certain function. A command may act upon a state, but does not necessarily act upon a state. For example, the ON command acts upon the ON/OFF state, but the GET command does not act upon any state, it simply gives a directive to retrieve a certain value. We propose here a list of commands that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
+        <rdfs:label xml:lang="en">Command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Commodity -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Commodity">
+        <rdfs:comment xml:lang="en">A marketable item for which there is demand, but which is supplied without qualitative differentiation across a market. SAREF refers to energy commodities such as electricity, gas, coal and oil. </rdfs:comment>
+        <rdfs:label xml:lang="en">Commodity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Currency -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Currency">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The class of units of measure for price</rdfs:comment>
+        <rdfs:label xml:lang="en">Currency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/DataFormat -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/DataFormat">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/ServiceProperty"/>
+        <rdfs:comment xml:lang="en">The data format clarifies the representation of a service.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/DescriptivePositionRepresentation -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/DescriptivePositionRepresentation">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/PositionFormat"/>
+        <rdfs:comment xml:lang="en">The Descriptive Position Representation is a type of a Position Format.</rdfs:comment>
+        <rdfs:label xml:lang="en">Descriptive Position Representation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/DescriptiveTimeRepresentation -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/DescriptiveTimeRepresentation">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/TimeFormat"/>
+        <rdfs:label xml:lang="en">Descriptive Time Representation</rdfs:label>
+        <rdfs:label xml:lang="en">The Phase of Week is a type of Descriptive Representation.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/DetectionFeature -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/DetectionFeature">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/FeatureOfInterest"/>
+        <rdfs:comment>The detection feature recognises or discovers the presence or absence of a certain condition, element, or change within an object or its environment. It provides information of the occurrence or non-occurrence of a specific event or condition.</rdfs:comment>
+        <rdfs:label>Detection Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/DetectionFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/DetectionFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/SensingFunction"/>
+        <rdfs:comment xml:lang="en">The detection function detects the presence or absence of a certain condition, state, or change within an object or its environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">DetectionFunction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Device -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/consistsOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasProfile"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasState"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isUsedFor"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/Commodity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/makesMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/offers"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/accomplishes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://liidr.org/saref-ta/Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasFunction"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://liidr.org/saref-ta/Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasManufacturer"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasModel"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A tangible object designed to accomplish a particular task. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/DoorSwitch -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/DoorSwitch">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Switch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/OpenCloseFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasState"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/OpenCloseState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A switch that performs the saref:OpenCloseFunction, is used for controlling a door, and can be found in the state saref:OpenCloseState. A saref:DoorSwitch is typically used to accomplish saref:Safety.</rdfs:comment>
+        <rdfs:label xml:lang="en">Door switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Electricity -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Electricity">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Commodity"/>
+        <rdfs:comment xml:lang="en">A type of commodity</rdfs:comment>
+        <rdfs:label xml:lang="en">Electricity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/EncryptionStandard -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/EncryptionStandard">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/ServiceProperty"/>
+        <rdfs:comment xml:lang="en">The Encyption Standard clarifies the encryption method for the service communication.</rdfs:comment>
+        <rdfs:label xml:lang="en">Encryption Standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/EnergyUnit -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/EnergyUnit">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The unit of measure for energy</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/EventFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/EventFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasThresholdMeasurement"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A function that allows to notify about some relevant activity; e.g., that a certain threshold value has been exceeded or that some object has moved.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/FeatureOfInterest -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/FeatureOfInterest">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A feature of interest represents any real world entity from which a property is measured.</rdfs:comment>
+        <rdfs:label xml:lang="en">Feature of interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/FormalPositionRepresentation -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/FormalPositionRepresentation">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/PositionFormat"/>
+        <rdfs:comment xml:lang="en">The Descriptive Position Representation is a type of a Position Format.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/FormalTimeRepresentation -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/FormalTimeRepresentation">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/TimeFormat"/>
+        <rdfs:comment xml:lang="en">The formal time representation refers to standardized formats for expressing time and date information.</rdfs:comment>
+        <rdfs:label xml:lang="en">Formal Time Representation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Function -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Function">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasCommand"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://liidr.org/saref-ta/Command"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The functionality necessary to accomplish the task for which a device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth. </rdfs:comment>
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Gas -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Gas">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Commodity"/>
+        <rdfs:comment xml:lang="en">A type of commodity</rdfs:comment>
+        <rdfs:label xml:lang="en">Gas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/GeographicCoordinates -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/GeographicCoordinates">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/FormalPositionRepresentation"/>
+        <rdfs:comment xml:lang="en">The Geographic Coordinates is a type of a Formal Position Representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Geographic Coordinates</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/GetCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/GetCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Get command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/GetCurrentMeterValueCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/GetCurrentMeterValueCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/GetCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/MeteringFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of get command</rdfs:comment>
+        <rdfs:label xml:lang="en">Get current meter value command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/GetMeterDataCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/GetMeterDataCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/GetCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/MeteringFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of get command</rdfs:comment>
+        <rdfs:label xml:lang="en">Get meter data command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/GetMeterHistoryCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/GetMeterHistoryCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/GetCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/MeteringFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of get command</rdfs:comment>
+        <rdfs:label xml:lang="en">Get meter history command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/GetSensingDataCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/GetSensingDataCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/GetCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of get command</rdfs:comment>
+        <rdfs:label xml:lang="en">Get sensing data command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/HVAC -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/HVAC">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:comment xml:lang="en">Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. A saref:HVAC is typically used to accomplish saref:Comfort.</rdfs:comment>
+        <rdfs:label xml:lang="en">HVAC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/HardwareProperty -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/HardwareProperty">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Property"/>
+        <rdfs:comment xml:lang="en">The hardware property presents the available hardware-related resources that enable and prevents to conduct certain tasks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hardware Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/IdentificationFeature -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/IdentificationFeature">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/FeatureOfInterest"/>
+        <rdfs:comment>The identification feature concerns with the recognition and distinction of an object or its specific aspects from others. This feature is crucial in differentiating one entity from another based on unique characteristics or patterns.</rdfs:comment>
+        <rdfs:label>Identification feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/IdentificationFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/IdentificationFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/SensingFunction"/>
+        <rdfs:comment xml:lang="en">The identification function provides the capability to identify objects. Several technologies, such as RFID or optical sensor systems, may be feasible to identify an object.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identification Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/IlluminanceUnit -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/IlluminanceUnit">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The unit of measure for light</rdfs:comment>
+        <rdfs:label xml:lang="en">Illuminance unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/IndoorLabel -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/IndoorLabel">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/DescriptivePositionRepresentation"/>
+        <rdfs:comment xml:lang="en">The Indoor Label is a type of the Descriptive Position Representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Indoor Label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/LevelControlFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/LevelControlFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/ActuatingFunction"/>
+        <rdfs:comment xml:lang="en">An actuating function that allows to do level adjustments of a property in a certain range (e.g., 0%-100%), such as dimming a light in a room or setting the speed of an electric motor. </rdfs:comment>
+        <rdfs:label xml:lang="en">Level control function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/LightSwitch -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/LightSwitch">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Switch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasState"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A switch that performs the saref:OnOffFunction, controls the property saref:Light, and can be found in the state saref:OnOffState. It can offer a switch on service. A saref:LightSwitch is typically used to accomplish saref:Lighting.</rdfs:comment>
+        <rdfs:label xml:lang="en">Light switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Measurement -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Measurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isMeasuredIn"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isMeasurementOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isMeasuredIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://liidr.org/saref-ta/UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasTimestamp"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasValue"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/MeasuringFeature -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/MeasuringFeature">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/FeatureOfInterest"/>
+        <rdfs:comment>The measuring feature refers to a feature of an object that quantitatively assesses certain properties or dimensions. The measuring feature is quantitative and focuses on providing numerical data or values about the object.</rdfs:comment>
+        <rdfs:label>Measuring features</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/MeasuringFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/MeasuringFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/SensingFunction"/>
+        <rdfs:comment xml:lang="en">The measuring function provide the capability to capture certain properties or dimensions of the environment. The measuring fucntion provides numerical data or values about the sensed environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">MeasuringFunction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Meter -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Meter">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/MeteringFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A device built to accurately detect and display a quantity in a form readable by a human being. Further, a device of category saref:Meter that performs a saref:MeteringFunction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Meter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/MeteringFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/MeteringFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasMeterReading"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A function that allows to get data from a meter, such as current meter reading or instantaneous demand</rdfs:comment>
+        <rdfs:label xml:lang="en">Metering function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/MultiLevelState -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/MultiLevelState">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/State"/>
+        <rdfs:comment xml:lang="en">A type of state</rdfs:comment>
+        <rdfs:label xml:lang="en">Multi level state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/NetworkHeaderProperty -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/NetworkHeaderProperty">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/NetworkPacketProperty"/>
+        <rdfs:comment xml:lang="en">The network header property specifies important concepts for trust-dependent features.</rdfs:comment>
+        <rdfs:label xml:lang="en">Network Header Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/NetworkPacket -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/NetworkPacket">
+        <rdfs:comment xml:lang="en">The network packet concept represents the state of the communicated information.</rdfs:comment>
+        <rdfs:label xml:lang="en">Network Packet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/NetworkPacketProperty -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/NetworkPacketProperty">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Property"/>
+        <rdfs:comment xml:lang="en">The network packet property specifies properties of a network packet that are required to compute physical network metrics.</rdfs:comment>
+        <rdfs:label xml:lang="en">Network Packet Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/NetworkProtocolCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/NetworkProtocolCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:comment xml:lang="en">The Network Protocol Command concept extends the command concept. In contrast to the saref:GetCommand and saref:NotifyCommand that are considering device internal communiciation, the Network Protocol Command clarifies commands of network protocols, such as the HTTPPostCommand ot HTTPGetCommand to generated NetworkPackets.</rdfs:comment>
+        <rdfs:label xml:lang="en">Network Protocol Command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/NetworkingFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/NetworkingFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Function"/>
+        <rdfs:comment xml:lang="en">The network function of a device encompasses its capabilities to connect, communicate, and interact with other devices, systems, or networks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Network Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/NotifyCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/NotifyCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/EventFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Notify command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/ObjectPosition -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/ObjectPosition">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/RelativePosition"/>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OffCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OffCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://liidr.org/saref-ta/OnCommand"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Off command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OffState -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OffState">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/OnOffState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is Off</rdfs:comment>
+        <rdfs:label xml:lang="en">Off state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OnCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OnCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">On command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OnOffFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OnOffFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/ActuatingFunction"/>
+        <rdfs:comment xml:lang="en">An actuating function that allows to switch on and off an actuator</rdfs:comment>
+        <rdfs:label xml:lang="en">On off function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OnOffState -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OnOffState">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/State"/>
+        <rdfs:comment xml:lang="en">A type of state</rdfs:comment>
+        <rdfs:label xml:lang="en">On off state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OnState -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OnState">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/OnOffState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is On</rdfs:comment>
+        <rdfs:label xml:lang="en">On state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OpenCloseFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OpenCloseFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/ActuatingFunction"/>
+        <rdfs:comment xml:lang="en">An actuating function that allows to open and close a device</rdfs:comment>
+        <rdfs:label xml:lang="en">Open close function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OpenCloseState -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OpenCloseState">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/State"/>
+        <rdfs:comment xml:lang="en">A type of state</rdfs:comment>
+        <rdfs:label xml:lang="en">Open close state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OpenCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OpenCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/OpenCloseState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/OpenCloseFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Open command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OpenState -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OpenState">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/OpenCloseState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is OPEN </rdfs:comment>
+        <rdfs:label xml:lang="en">Open state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OriginPosition -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OriginPosition">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/RelativePosition"/>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/OutdoorLabel -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/OutdoorLabel">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/DescriptivePositionRepresentation"/>
+        <rdfs:comment>The Outdoor Label is a type of the Descriptive Position Representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Outdoor Label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/PacketDestinationAddress -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/PacketDestinationAddress">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/NetworkHeaderProperty"/>
+        <rdfs:comment xml:lang="en">The packet destination address clarifies the receiver of a data frame.</rdfs:comment>
+        <rdfs:label xml:lang="en">Packet Destination Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/PacketSourceAddress -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/PacketSourceAddress">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/NetworkHeaderProperty"/>
+        <rdfs:comment xml:lang="en">The packet source address clarifies the sender of a dataframe.</rdfs:comment>
+        <rdfs:label xml:lang="en">Packet Source Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/PauseCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/PauseCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Pause command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/PhaseOfDay -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/PhaseOfDay">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/DescriptiveTimeRepresentation"/>
+        <rdfs:comment xml:lang="en">The Phase of Day is a type of Descriptive Representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Phase of Day</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/PhaseOfWeek -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/PhaseOfWeek">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/DescriptiveTimeRepresentation"/>
+        <rdfs:comment xml:lang="en">The Phase of Week is a type of Descriptive Representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Phase of Week</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/PositionFormat -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/PositionFormat">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/SpatioTemporalProperty"/>
+        <rdfs:comment xml:lang="en">The Position Format specifies formats to describe positions for the spatio temporal property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Position Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/PowerUnit -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/PowerUnit">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The unit of measure for power</rdfs:comment>
+        <rdfs:label xml:lang="en">Power unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/PressureUnit -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/PressureUnit">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The unit of measure for pressure</rdfs:comment>
+        <rdfs:label xml:lang="en">Pressure unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Profile -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Profile">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/consistsOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasTime"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A specification associated to a device to collect information about a certain Property (e.g., Energy) for optimizing its usage in the home, office or building in which the device is located. This specification is about a certain Property (saref:isAbout), can be calculated over a time span (saref:hasTime) and can be associated to some costs (saref:hasPrice). An example is the Power Profile defined in the SAREF4ENER extension that can be associated to a device for optimizing the Energy efficiency in the home, office or building in which the device is located.</rdfs:comment>
+        <rdfs:label xml:lang="en">Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Property -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Property">
+        <rdfs:comment xml:lang="en">A quality of a feature of interest that can be measured including external feature of interest from the environment and internal feature procduced or inherit from the device itself.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/RelativePosition -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/RelativePosition">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/FormalPositionRepresentation"/>
+        <rdfs:comment>The Relative Position is a type of a Formal Position Representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Relative Position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/RequestFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/RequestFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/NetworkingFunction"/>
+        <rdfs:comment xml:lang="en">The request function in a device refers to its capability to initiate a request for data, services, or actions from other devices or systems within a network.</rdfs:comment>
+        <rdfs:label xml:lang="en">Request Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/ResponseFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/ResponseFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/NetworkingFunction"/>
+        <rdfs:comment xml:lang="en">The response function of a device involves its ability to provide data, services, or actions in reaction to incoming requests from other network entities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Response Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/SensingFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/SensingFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasSensingRange"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A function that allows to transmit data from sensors, such as measurement values (e.g., temperature) or sensing data (e.g., occupancy)</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensing function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Sensor -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Sensor">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. Further, a device of category saref:Sensor that performs a saref:SensingFunction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Service -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isOfferedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://liidr.org/saref-ta/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/represents"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://liidr.org/saref-ta/Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service and the function(s) to be represented.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/ServiceDescription -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/ServiceDescription">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/ServiceProperty"/>
+        <rdfs:comment xml:lang="en">The Service Description specifies the service, such as properties, methods, and endpoints. For instance, RDFs are used to describe services.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service Description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/ServiceEndpoint -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/ServiceEndpoint">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/ServiceProperty"/>
+        <rdfs:comment xml:lang="en">The Service Endpoint entity refers the information needed to address a web service endpoint.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service Endpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/ServiceName -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/ServiceName">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/ServiceProperty"/>
+        <dcterms:description xml:lang="en">The service name identifies a service by a unique name.</dcterms:description>
+        <rdfs:label xml:lang="en">Service Name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/ServiceProperty -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/ServiceProperty">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Property"/>
+        <rdfs:comment xml:lang="en">The service property provides information about the service.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/SetAbsoluteLevelCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/SetAbsoluteLevelCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/SetLevelCommand"/>
+        <rdfs:comment xml:lang="en">A type of set level command</rdfs:comment>
+        <rdfs:label xml:lang="en">Set absolute level command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/SetLevelCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/SetLevelCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/MultiLevelState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/LevelControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Set level command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/SetRelativeLevelCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/SetRelativeLevelCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/SetLevelCommand"/>
+        <rdfs:comment xml:lang="en">A type of set level command</rdfs:comment>
+        <rdfs:label xml:lang="en">Set relative level command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/SmokeSensor -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/SmokeSensor">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/EventFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A sensor that performs the saref:SensingFunction and the saref:EventFunction, and is used for the purpose of sensing a property of type saref:Smoke. A saref:SmokeSensor is typically used to saref:accomplish saref:Safety.</rdfs:comment>
+        <rdfs:label xml:lang="en">Smoke sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/SpatioTemporalProperty -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/SpatioTemporalProperty">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Property"/>
+        <rdfs:comment xml:lang="en">The Spatio Temporal Property specifies the time and location of a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Spatio Temporal Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/StartCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/StartCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/StartStopState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/StartStopFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://liidr.org/saref-ta/StopCommand"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Start command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/StartState -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/StartState">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/StartStopState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is STARTED</rdfs:comment>
+        <rdfs:label xml:lang="en">Start state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/StartStopFunction -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/StartStopFunction">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/ActuatingFunction"/>
+        <rdfs:comment xml:lang="en">An actuating function that allows to start and stop a device</rdfs:comment>
+        <rdfs:label xml:lang="en">Start stop function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/StartStopState -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/StartStopState">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/State"/>
+        <rdfs:comment xml:lang="en">A type of state</rdfs:comment>
+        <rdfs:label xml:lang="en">Start stop state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/State -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/State"/>
+    
+
+
+    <!-- https://liidr.org/saref-ta/StepDownCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/StepDownCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/MultiLevelState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/LevelControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://liidr.org/saref-ta/StepUpCommand"/>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Step down command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/StepUpCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/StepUpCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/MultiLevelState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/LevelControlFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Step up command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/StopCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/StopCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/actsUpon"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/StartStopState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/StartStopFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/StopState -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/StopState">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/StartStopState"/>
+        <rdfs:comment xml:lang="en">The state of a device that is STOPPED</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Switch -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Switch">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Actuator"/>
+        <rdfs:comment xml:lang="en">A device of category saref:Actuator that performs an actuating function of type saref:OnOffFunction or saref:OpenCloseFunction</rdfs:comment>
+        <rdfs:label xml:lang="en">Switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Task -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Task">
+        <rdfs:comment xml:lang="en">The goal for which a device is designed (from a user perspective). For example, a washing machine is designed for the task of washing. We propose here a list of tasks that are relevant for the purpose of SAREF, but this list can be extended. Tasks can be accomplished by devices (saref:isAccomplishedBy).</rdfs:comment>
+        <rdfs:label xml:lang="en">Task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/TemperatureSensor -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://liidr.org/saref-ta/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A sensor that is used for the purpose of sensing a property of type saref:Temperature. A saref:TemperatureSensor is typically used to saref:accomplish saref:Comfort.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/TemperatureUnit -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/TemperatureUnit">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/UnitOfMeasure"/>
+        <rdfs:comment xml:lang="en">The unit of measure for temperature</rdfs:comment>
+        <rdfs:label xml:lang="en">Temperature unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Time -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Time">
+        <rdfs:comment xml:lang="en">A class that allows to specify the time concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/TimeFormat -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/TimeFormat">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/SpatioTemporalProperty"/>
+        <rdfs:comment xml:lang="en">The time format represents a structured way of time-related concepts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/ToggleCommand -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/ToggleCommand">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Command"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://liidr.org/saref-ta/isCommandOf"/>
+                <owl:allValuesFrom rdf:resource="https://liidr.org/saref-ta/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of command</rdfs:comment>
+        <rdfs:label xml:lang="en">Toggle command</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/TrustIndicator -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/TrustIndicator">
+        <rdfs:comment xml:lang="en">The Trust Indicator indicates the satisfactory state or level of a certain task characteristic to demonstrate trustworthiness.</rdfs:comment>
+        <rdfs:label xml:lang="en">Trust Indicator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/UnitOfMeasure -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/UnitOfMeasure">
+        <rdfs:comment xml:lang="en">The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called &quot;watt&quot;. Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM).</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit of measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/VersionsNumber -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/VersionsNumber">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/ServiceProperty"/>
+        <rdfs:comment xml:lang="en">The version number specify the version of a service.</rdfs:comment>
+        <rdfs:label xml:lang="en">Version Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Water -->
+
+    <owl:Class rdf:about="https://liidr.org/saref-ta/Water">
+        <rdfs:subClassOf rdf:resource="https://liidr.org/saref-ta/Commodity"/>
+        <rdfs:comment xml:lang="en">A type of commodity</rdfs:comment>
+        <rdfs:label xml:lang="en">Water</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://liidr.org/saref-ta/Cleaning -->
+
+    <owl:NamedIndividual rdf:about="https://liidr.org/saref-ta/Cleaning">
+        <rdf:type rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Cleaning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Comfort -->
+
+    <owl:NamedIndividual rdf:about="https://liidr.org/saref-ta/Comfort">
+        <rdf:type rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Comfort</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Drying -->
+
+    <owl:NamedIndividual rdf:about="https://liidr.org/saref-ta/Drying">
+        <rdf:type rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Drying</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://liidr.org/saref-ta/EnergyEfficiency -->
+
+    <owl:NamedIndividual rdf:about="https://liidr.org/saref-ta/EnergyEfficiency">
+        <rdf:type rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">EnergyEfficiency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Entertainment -->
+
+    <owl:NamedIndividual rdf:about="https://liidr.org/saref-ta/Entertainment">
+        <rdf:type rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Entertainment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Lighting -->
+
+    <owl:NamedIndividual rdf:about="https://liidr.org/saref-ta/Lighting">
+        <rdf:type rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Lighting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://liidr.org/saref-ta/MeterReading -->
+
+    <owl:NamedIndividual rdf:about="https://liidr.org/saref-ta/MeterReading">
+        <rdf:type rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Meter reading</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Safety -->
+
+    <owl:NamedIndividual rdf:about="https://liidr.org/saref-ta/Safety">
+        <rdf:type rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Safety</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://liidr.org/saref-ta/Washing -->
+
+    <owl:NamedIndividual rdf:about="https://liidr.org/saref-ta/Washing">
+        <rdf:type rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">Washing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://liidr.org/saref-ta/WellBeing -->
+
+    <owl:NamedIndividual rdf:about="https://liidr.org/saref-ta/WellBeing">
+        <rdf:type rdf:resource="https://liidr.org/saref-ta/Task"/>
+        <rdfs:comment xml:lang="en">A type of task for which a device is designed</rdfs:comment>
+        <rdfs:label xml:lang="en">WellBeing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://liidr.org/saref-ta/State">
+        <rdfs:comment xml:lang="en">The state in which a device can be found, e.g, ON/OFF/STANDBY, or ONLINE/OFFLINE. We propose here a list of states that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
