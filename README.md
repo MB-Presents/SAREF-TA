@@ -24,7 +24,7 @@ The integration of Internet of Things (IoT) devices into social networks, formin
 
 ## Solution: Smart Application Reference Ontology for Trust Agents
 
-The SAREF-TA ontology aims to provide a comprehensive semantic framework to facilitate trust in SIoT by detailing concepts related to tasks, devices, measurements, properties, profiles, network packets, and trust indicators. It enables devices to assess trustworthiness dynamically and make informed decisions about interactions with other entities in the network, leveraging context-aware and social features to enhance trust inference capabilities.
+The SAREF-TA ontology aims to provide a comprehensive semantic framework to facilitate the definition of SIoT devices by detailing concepts related to tasks, devices, measurements, properties, profiles, network packets, and trust indicators. It enables trust models to use this framework as a specification of an SIoT device by leveraging context-aware features for trust recommendations.
 
 ## Contribution
 
