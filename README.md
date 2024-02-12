@@ -20,9 +20,7 @@ Turtle: @prefix saref-ta:
 
 ## Relevance
 
-The integration of Internet of Things (IoT) devices into social networks, forming the Social Internet of Things (SIoT), presents unprecedented opportunities for enhancing device interaction and automating decision-making processes. However, the inherent challenges of trustworthiness and security within such a distributed network remain significant hurdles. Traditional centralized security mechanisms fall short in addressing the dynamic and decentralized nature of SIoT, where trust and reputation play crucial roles in ensuring reliable interactions among devices.
-
-Trust in SIoT extends beyond traditional security, encapsulating the reliability, performance, and competence of interacting entities. Given the dynamic and context-sensitive nature of SIoT environments, establishing and maintaining trust requires a nuanced understanding of the devices' capabilities, past interactions, and social connections.
+The integration of Internet of Things (IoT) devices into social networks, forming the Social Internet of Things (SIoT), presents unprecedented opportunities for enhancing device interaction and automating decision-making processes. However, the inherent challenges of trustworthiness and security within such a distributed network remain significant hurdles. One key isssue is the accurate definiton of IoT device that prevents to standardise trust models by having an comprehensive contextual device description.
 
 ## Solution: Smart Application Reference Ontology for Trust Agents
 
